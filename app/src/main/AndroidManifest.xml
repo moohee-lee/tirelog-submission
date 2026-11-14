@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 공개 타이어 모델 목록 갱신. 차량·등록 기록은 전송하지 않는다. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Pleos 기본 TPMS 차량 도형을 설치된 패키지에서 읽는다. -->
+    <queries>
+        <package android:name="ai.umos.drivingview" />
+    </queries>
+
+    <!-- Pleos Vehicle SDK. 각 API의 @RequiresPermission(SDK 2.3.2) 기준 -->
+    <!-- Tire.getTirePressure / registerTirePressure / checkTirePressureCapabilities -->
+    <uses-permission android:name="pleos.car.permission.PRIVATE_CAR_SAFETY" />
+    <!-- Tire.checkWheelAreaCapabilities / getLowTirePressure -->
+    <uses-permission android:name="pleos.car.permission.CAR_SAFETY" />
+    <!-- Odometer.getCurrentDistanceDriven / registerDistanceDriven / checkCurrentDistanceDrivenCapabilities -->
+    <uses-permission android:name="pleos.car.permission.CAR_DRIVE" />
+    <!-- CarInfo.getVINInfo -->
+    <uses-permission android:name="pleos.car.permission.CAR_INFO" />
+    <!-- AAOS 제조사·모델·연식: 확인된 국내 차종 기본값 제안 -->
+    <uses-permission android:name="android.car.permission.CAR_INFO" />
+
+    <!-- AAOS: ENV_OUTSIDE_TEMPERATURE / GEAR_SELECTION, IGNITION_STATE -->
+    <uses-permission android:name="android.car.permission.CAR_EXTERIOR_ENVIRONMENT" />
+    <uses-permission android:name="android.car.permission.CAR_POWERTRAIN" />
+
+    <!-- NaviHelper: requestRoute / get*Info / requestNavigationScreen(SearchPlace) -->
+    <uses-permission android:name="pleos.car.permission.NAVI_ROUTE_SEARCH" />
+    <uses-permission android:name="pleos.car.permission.NAVI_ROUTE" />
+    <uses-permission android:name="pleos.car.permission.NAVI_CUSTOM_MAP" />
+
+    <!-- TextToSpeech -->
+    <uses-permission android:name="pleos.car.permission.TTS_SERVICE" />
+
+    <!-- 주행 중 백그라운드 기록 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:name=".TirelogApp"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Tirelog">
+
+        <uses-library
+            android:name="android.car"
+            android:required="false" />
+
+        <!-- 시동 카드(S1). DO(주의분산 최적화)는 이 화면에만 선언한다. -->
+        <activity
+            android:name=".ui.card.CardActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.Tirelog">
+            <meta-data
+                android:name="distractionOptimized"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 상세·세트·작업 기록·증상 카드·설정. DO 미선언이라 정차 중에만 쓴다. -->
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Tirelog"
+            android:windowSoftInputMode="adjustResize" />
+
+        <service
+            android:name=".collect.CollectorService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Records tire pressure, outside temperature and odometer while driving" />
+        </service>
+
+        <receiver
+            android:name=".collect.BootReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

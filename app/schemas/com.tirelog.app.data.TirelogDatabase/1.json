@@ -1,0 +1,712 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "77c427e29a0c8f785862d686a6d04066",
+    "entities": [
+      {
+        "tableName": "settings",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `onboardingDone` INTEGER NOT NULL, `recFrontKpa` REAL, `recRearKpa` REAL, `recSource` TEXT, `rotationIntervalKm` INTEGER NOT NULL, `regionCode` TEXT, `vin` TEXT, `shopName` TEXT, `shopLat` REAL, `shopLon` REAL, `shopPoiId` TEXT, `shopPoiSubId` TEXT, `shopAddress` TEXT, `pressureSupported` INTEGER NOT NULL, `odometerSupported` INTEGER NOT NULL, `refillDay` INTEGER, `refillTireIds` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "onboardingDone",
+            "columnName": "onboardingDone",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recFrontKpa",
+            "columnName": "recFrontKpa",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "recRearKpa",
+            "columnName": "recRearKpa",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "recSource",
+            "columnName": "recSource",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "rotationIntervalKm",
+            "columnName": "rotationIntervalKm",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "regionCode",
+            "columnName": "regionCode",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "vin",
+            "columnName": "vin",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "shopName",
+            "columnName": "shopName",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "shopLat",
+            "columnName": "shopLat",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "shopLon",
+            "columnName": "shopLon",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "shopPoiId",
+            "columnName": "shopPoiId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "shopPoiSubId",
+            "columnName": "shopPoiSubId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "shopAddress",
+            "columnName": "shopAddress",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "pressureSupported",
+            "columnName": "pressureSupported",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "odometerSupported",
+            "columnName": "odometerSupported",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "refillDay",
+            "columnName": "refillDay",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "refillTireIds",
+            "columnName": "refillTireIds",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "drive_state",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `lastStopAt` INTEGER, `lastStopOdo` REAL, `lastKnownOdo` REAL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastStopAt",
+            "columnName": "lastStopAt",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "lastStopOdo",
+            "columnName": "lastStopOdo",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "lastKnownOdo",
+            "columnName": "lastKnownOdo",
+            "affinity": "REAL"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "tire_set",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `type` TEXT NOT NULL, `size` TEXT, `dot` TEXT, `createdAt` INTEGER NOT NULL, `retired` INTEGER NOT NULL, `initialKm` REAL NOT NULL, `kmAtLastRotation` REAL NOT NULL, `recFrontKpa` REAL, `recRearKpa` REAL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "size",
+            "columnName": "size",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "dot",
+            "columnName": "dot",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "retired",
+            "columnName": "retired",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "initialKm",
+            "columnName": "initialKm",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kmAtLastRotation",
+            "columnName": "kmAtLastRotation",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recFrontKpa",
+            "columnName": "recFrontKpa",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "recRearKpa",
+            "columnName": "recRearKpa",
+            "affinity": "REAL"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "tire",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `setId` INTEGER NOT NULL, `label` TEXT NOT NULL, `position` TEXT NOT NULL, `dot` TEXT, `active` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "setId",
+            "columnName": "setId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "label",
+            "columnName": "label",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "position",
+            "columnName": "position",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dot",
+            "columnName": "dot",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "active",
+            "columnName": "active",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_tire_setId",
+            "unique": false,
+            "columnNames": [
+              "setId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_tire_setId` ON `${TABLE_NAME}` (`setId`)"
+          }
+        ]
+      },
+      {
+        "tableName": "mount",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `setId` INTEGER NOT NULL, `mountOdo` REAL NOT NULL, `mountAt` INTEGER NOT NULL, `unmountOdo` REAL, `unmountAt` INTEGER)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "setId",
+            "columnName": "setId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mountOdo",
+            "columnName": "mountOdo",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mountAt",
+            "columnName": "mountAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unmountOdo",
+            "columnName": "unmountOdo",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "unmountAt",
+            "columnName": "unmountAt",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "event",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `type` TEXT NOT NULL, `atMillis` INTEGER NOT NULL, `odo` REAL, `setId` INTEGER, `tireIds` TEXT NOT NULL, `detail` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "atMillis",
+            "columnName": "atMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "odo",
+            "columnName": "odo",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "setId",
+            "columnName": "setId",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "tireIds",
+            "columnName": "tireIds",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "detail",
+            "columnName": "detail",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_event_atMillis",
+            "unique": false,
+            "columnNames": [
+              "atMillis"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_event_atMillis` ON `${TABLE_NAME}` (`atMillis`)"
+          }
+        ]
+      },
+      {
+        "tableName": "measurement",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `tireId` INTEGER NOT NULL, `position` TEXT NOT NULL, `kpa` REAL NOT NULL, `tempC` REAL, `odo` REAL, `atMillis` INTEGER NOT NULL, `epochDay` INTEGER NOT NULL, `cold` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tireId",
+            "columnName": "tireId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "position",
+            "columnName": "position",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kpa",
+            "columnName": "kpa",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tempC",
+            "columnName": "tempC",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "odo",
+            "columnName": "odo",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "atMillis",
+            "columnName": "atMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "epochDay",
+            "columnName": "epochDay",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cold",
+            "columnName": "cold",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_measurement_tireId",
+            "unique": false,
+            "columnNames": [
+              "tireId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_measurement_tireId` ON `${TABLE_NAME}` (`tireId`)"
+          },
+          {
+            "name": "index_measurement_atMillis",
+            "unique": false,
+            "columnNames": [
+              "atMillis"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_measurement_atMillis` ON `${TABLE_NAME}` (`atMillis`)"
+          }
+        ]
+      },
+      {
+        "tableName": "baseline",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`tireId` INTEGER NOT NULL, `kpa` REAL, `tempC` REAL, `epochDay` INTEGER, `origin` TEXT NOT NULL, PRIMARY KEY(`tireId`))",
+        "fields": [
+          {
+            "fieldPath": "tireId",
+            "columnName": "tireId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kpa",
+            "columnName": "kpa",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "tempC",
+            "columnName": "tempC",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "epochDay",
+            "columnName": "epochDay",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "origin",
+            "columnName": "origin",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "tireId"
+          ]
+        }
+      },
+      {
+        "tableName": "trend_state",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`tireId` INTEGER NOT NULL, `leakStreak` INTEGER NOT NULL, `declineStreak` INTEGER NOT NULL, `lastEvalDay` INTEGER, PRIMARY KEY(`tireId`))",
+        "fields": [
+          {
+            "fieldPath": "tireId",
+            "columnName": "tireId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "leakStreak",
+            "columnName": "leakStreak",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "declineStreak",
+            "columnName": "declineStreak",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastEvalDay",
+            "columnName": "lastEvalDay",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "tireId"
+          ]
+        }
+      },
+      {
+        "tableName": "day_result",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`epochDay` INTEGER NOT NULL, `computedAt` INTEGER NOT NULL, `tempC` REAL, `baselineTempC` REAL, `cause` TEXT NOT NULL, PRIMARY KEY(`epochDay`))",
+        "fields": [
+          {
+            "fieldPath": "epochDay",
+            "columnName": "epochDay",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "computedAt",
+            "columnName": "computedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tempC",
+            "columnName": "tempC",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "baselineTempC",
+            "columnName": "baselineTempC",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "cause",
+            "columnName": "cause",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "epochDay"
+          ]
+        }
+      },
+      {
+        "tableName": "tire_day_status",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`epochDay` INTEGER NOT NULL, `tireId` INTEGER NOT NULL, `position` TEXT NOT NULL, `kpa` REAL NOT NULL, `recommendedKpa` REAL, `needsRefill` INTEGER NOT NULL, `refillSuspected` INTEGER NOT NULL, `correctedLossKpa` REAL, `baselineEpochDay` INTEGER, `baselineOrigin` TEXT, `leakStreak` INTEGER NOT NULL, `declineStreak` INTEGER NOT NULL, `leakSuspected` INTEGER NOT NULL, `recheckNeeded` INTEGER NOT NULL, PRIMARY KEY(`epochDay`, `tireId`))",
+        "fields": [
+          {
+            "fieldPath": "epochDay",
+            "columnName": "epochDay",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tireId",
+            "columnName": "tireId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "position",
+            "columnName": "position",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kpa",
+            "columnName": "kpa",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recommendedKpa",
+            "columnName": "recommendedKpa",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "needsRefill",
+            "columnName": "needsRefill",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "refillSuspected",
+            "columnName": "refillSuspected",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "correctedLossKpa",
+            "columnName": "correctedLossKpa",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "baselineEpochDay",
+            "columnName": "baselineEpochDay",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "baselineOrigin",
+            "columnName": "baselineOrigin",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "leakStreak",
+            "columnName": "leakStreak",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "declineStreak",
+            "columnName": "declineStreak",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "leakSuspected",
+            "columnName": "leakSuspected",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recheckNeeded",
+            "columnName": "recheckNeeded",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "epochDay",
+            "tireId"
+          ]
+        }
+      },
+      {
+        "tableName": "alert_state",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`key` TEXT NOT NULL, `lastShownDay` INTEGER, `snoozedUntilDay` INTEGER, `acknowledged` INTEGER NOT NULL, PRIMARY KEY(`key`))",
+        "fields": [
+          {
+            "fieldPath": "key",
+            "columnName": "key",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastShownDay",
+            "columnName": "lastShownDay",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "snoozedUntilDay",
+            "columnName": "snoozedUntilDay",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "acknowledged",
+            "columnName": "acknowledged",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "key"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '77c427e29a0c8f785862d686a6d04066')"
+    ]
+  }
+}

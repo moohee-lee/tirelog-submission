@@ -1,0 +1,13 @@
+{
+  "generated_on": "2026-11-07",
+  "method": "OpenAI built-in ImageGen",
+  "usage": "Original tire registration educational images; reference photographs were not supplied as generation inputs.",
+  "assets": [
+    {
+      "file": "drawable-nodpi/tire_manufacture_guide.webp"
+    },
+    {
+      "file": "drawable-nodpi/tire_size_guide.webp"
+    }
+  ]
+}

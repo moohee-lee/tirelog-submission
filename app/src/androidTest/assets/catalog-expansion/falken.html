@@ -1,0 +1,1086 @@
+<div class="csSnippet js-filter-snippet">
+<div>
+<!--
+                                            <h3 cs-if="cs.@assetType = 'product.'" class="h3-responsive" cs-translate="product.search.title">Product Portal</h3>
+                                            <h3 cs-if="cs.@assetType = 'article.'" class="h3-responsive" cs-translate="article.search.title">Product Portal</h3>
+                                            <hr>
+                                            -->
+<!-- cs-class="(cs.navigation.navigated.url?contains('/de/reifen/suche-nach-reifengroessen') || cs.navigation.navigated.url?contains('/en/tyres/search-for-tyre-sizes'))?string('search-top card p-3 fty-product-filter','search-top card p-3 fty-product-filter hidden');" -->
+<div class="search-top card p-3 fty-product-filter wow fadeInUp">
+<form class="js-ajax-form"> <div class="form-group">
+<div class="md-form">
+<input class="form-control js-ajax-value js-text-search"/> <label>Search for ...</label>
+</div>
+</div>
+<div class="js-filter-replace">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<p><b>General Features</b></p>
+</div>
+</div>
+<input class="js-filter js-ajax-value js-ajax-trigger-change"/><input class="js-ajax-value js-ajax-trigger-change js-ajax-page"/> <div class="row">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+<select class="mdb-select js-filter-data">
+<option>Width</option>
+<option>145
+</option>
+<option>155
+</option>
+<option>165
+</option>
+<option>175
+</option>
+<option>185
+</option>
+<option>195
+</option>
+<option>205
+</option>
+<option>215
+</option>
+<option>225
+</option>
+<option>235
+</option>
+<option>245
+</option>
+<option>255
+</option>
+<option>265
+</option>
+<option>275
+</option>
+<option>285
+</option>
+<option>295
+</option>
+<option>305
+</option>
+<option>315
+</option>
+<option>325
+</option>
+</select>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+<select class="mdb-select js-filter-data">
+<option>Height</option>
+<option>30
+</option>
+<option>35
+</option>
+<option>40
+</option>
+<option>45
+</option>
+<option>50
+</option>
+<option>55
+</option>
+<option>60
+</option>
+<option>65
+</option>
+<option>70
+</option>
+</select>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+<select class="mdb-select js-filter-data">
+<option>Rim</option>
+<option>14
+</option>
+<option>15
+</option>
+<option>16
+</option>
+<option>17
+</option>
+<option>18
+</option>
+<option>19
+</option>
+<option>20
+</option>
+<option>21
+</option>
+<option>22
+</option>
+</select>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+<select class="mdb-select js-filter-data">
+<option>Season</option>
+<option>Summer
+</option>
+</select>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+<select class="mdb-select js-filter-data">
+<option>Properties</option>
+<option>FEXM
+</option>
+</select>
+</div>
+</div>
+<div class="row">
+<div class="csCol-one-third">
+<div class="col__inner">
+<input class="btn"/>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3">
+<span class="csFilter__label">Results: 7</span>
+</div>
+<div class="col-lg-9 col-md-9 col-xs-12">
+<div class="btn-toolbar float-xs-right">
+<div class="btn-group">
+<button class="btn btn-secondary btn-sm waves-effect waves-light js-button-up"><i class="fa fa-angle-up"></i></button>
+<button class="btn btn-secondary btn-sm waves-effect waves-light js-button-down"><i class="fa fa-angle-down"></i></button>
+</div>
+<input class="js-ajax-variant js-ajax-trigger-change"/> <div class="btn-group">
+<button class="btn btn-secondary btn-sm waves-effect waves-light js-button-tile active"><i class="fa fa-th"></i></button>
+<button class="btn btn-secondary btn-sm waves-effect waves-light js-button-list"><i class="fa fa-list"></i></button>
+</div>
+</div>
+<div class="csSorting-select float-lg-right float-md-right float-sm-right float-xs-left mr-1">
+<input class="js-sorting js-ajax-value js-ajax-trigger-change"/>
+<select class="mdb-select js-sorting-data">
+<option>Relevance</option>
+<option>Name</option>
+<option>Article Number</option>
+<option>Weight</option>
+</select>
+</div>
+</div>
+</div>
+<hr/>
+<div class="clearfix"></div>
+</div>
+</form> </div>
+</div>
+<div class="csPreloader js-loading-indicator csEle__position-fixed">
+<div class="preloader-wrapper small active">
+<div class="spinner-layer spinner-yellow-only csLoader--them-color">
+<div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div>
+</div>
+</div>
+</div>
+<h2 class="h2-responsive wow fadeInUp">Summer tyres</h2>
+<!-- START Product Result Widget -->
+<div class="js-result-replace">
+<legend class="mt-2 wow fadeInUp">Search results</legend>
+<div class="row csGrid--flex fty-products fty-products-grid wow fadeInUp">
+<!-- GRID -->
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 csSpacer">
+<article class="">
+<div class="view hm-white-light hm-zoom linkbox hoverable"> <!-- cs-class="custom.template.concatClass('view hm-black-light linkbox hoverable ', cs.@section['image-box'].@style)" -->
+<p class="hidden">/__image/a/661261/alias/m/v/4/c/30/ar/1-1/fn/ziex-ze320-keyvisual-1820x1820px-en.jpg</p>
+<a href="/en/tyres/car-tyres/product-detail/661863"><!-- (cs.navigation.navigated.url?contains('/truck-tyres'))?then(product.url + '?type=truck', (cs.navigation.navigated.url?contains('/van-tyres'))?then(product.url + '?type=lighttruck', (cs.navigation.navigated.url?contains('/car-tyres'))?then(product.url + '?type=pcr', product.url))) -->
+<!-- <img src="img/african-women.png" cs-if="product.description.teaser.image(cs.@aspectRatio).m.src" class="img-fluid" alt="" cs-src="product.description.teaser.image('1-1').m.src" cs-attr-title="product.description.teaser.title?string" cs-attr-alt="product.description.teaser.alt"> -->
+<picture>
+<source/>
+<img alt="" class="img-fluid" src="/__image/a/661261/alias/m/v/4/c/30/ar/1-1/fn/ziex-ze320-keyvisual-1820x1820px-en.jpg"/>
+</picture>
+<div class="mask linkbox-content flex-center">
+<div class="linkbox-content-wrapper">
+<h3>Ziex ZE320</h3>
+<!-- <button class="fty-btn-teaser btn btn-primary">Test</button> -->
+</div>
+</div>
+</a>
+</div>
+</article>
+</div><div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 csSpacer">
+<article class="">
+<div class="view hm-white-light hm-zoom linkbox hoverable"> <!-- cs-class="custom.template.concatClass('view hm-black-light linkbox hoverable ', cs.@section['image-box'].@style)" -->
+<p class="hidden">/__image/a/626467/alias/m/v/5/c/39/ar/1-1/fn/azenis-rs820-keyvisual-1820x1820px-en.jpg</p>
+<a href="/en/tyres/car-tyres/product-detail/609267"><!-- (cs.navigation.navigated.url?contains('/truck-tyres'))?then(product.url + '?type=truck', (cs.navigation.navigated.url?contains('/van-tyres'))?then(product.url + '?type=lighttruck', (cs.navigation.navigated.url?contains('/car-tyres'))?then(product.url + '?type=pcr', product.url))) -->
+<!-- <img src="img/african-women.png" cs-if="product.description.teaser.image(cs.@aspectRatio).m.src" class="img-fluid" alt="" cs-src="product.description.teaser.image('1-1').m.src" cs-attr-title="product.description.teaser.title?string" cs-attr-alt="product.description.teaser.alt"> -->
+<picture>
+<source/>
+<img alt="" class="img-fluid" src="/__image/a/626467/alias/m/v/5/c/39/ar/1-1/fn/azenis-rs820-keyvisual-1820x1820px-en.jpg"/>
+</picture>
+<div class="mask linkbox-content flex-center">
+<div class="linkbox-content-wrapper">
+<h3>Azenis RS820</h3>
+<!-- <button class="fty-btn-teaser btn btn-primary">Test</button> -->
+</div>
+</div>
+</a>
+</div>
+</article>
+</div><div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 csSpacer">
+<article class="">
+<div class="view hm-white-light hm-zoom linkbox hoverable"> <!-- cs-class="custom.template.concatClass('view hm-black-light linkbox hoverable ', cs.@section['image-box'].@style)" -->
+<p class="hidden">/__image/a/439669/alias/m/v/4/c/31/ar/1-1/fn/eziex-keyvisual-1820x1820px-en.jpg</p>
+<a href="/en/tyres/car-tyres/product-detail/439269"><!-- (cs.navigation.navigated.url?contains('/truck-tyres'))?then(product.url + '?type=truck', (cs.navigation.navigated.url?contains('/van-tyres'))?then(product.url + '?type=lighttruck', (cs.navigation.navigated.url?contains('/car-tyres'))?then(product.url + '?type=pcr', product.url))) -->
+<!-- <img src="img/african-women.png" cs-if="product.description.teaser.image(cs.@aspectRatio).m.src" class="img-fluid" alt="" cs-src="product.description.teaser.image('1-1').m.src" cs-attr-title="product.description.teaser.title?string" cs-attr-alt="product.description.teaser.alt"> -->
+<picture>
+<source/>
+<img alt="" class="img-fluid" src="/__image/a/439669/alias/m/v/4/c/31/ar/1-1/fn/eziex-keyvisual-1820x1820px-en.jpg"/>
+</picture>
+<div class="mask linkbox-content flex-center">
+<div class="linkbox-content-wrapper">
+<h3>e. ZIEX</h3>
+<!-- <button class="fty-btn-teaser btn btn-primary">Test</button> -->
+</div>
+</div>
+</a>
+</div>
+</article>
+</div><div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 csSpacer">
+<article class="">
+<div class="view hm-white-light hm-zoom linkbox hoverable"> <!-- cs-class="custom.template.concatClass('view hm-black-light linkbox hoverable ', cs.@section['image-box'].@style)" -->
+<p class="hidden">/__image/a/310295/alias/m/v/4/c/30/ar/1-1/fn/azenis-fk520-keyvisual-1820x1820px-en.jpg</p>
+<a href="/en/tyres/car-tyres/product-detail/310083"><!-- (cs.navigation.navigated.url?contains('/truck-tyres'))?then(product.url + '?type=truck', (cs.navigation.navigated.url?contains('/van-tyres'))?then(product.url + '?type=lighttruck', (cs.navigation.navigated.url?contains('/car-tyres'))?then(product.url + '?type=pcr', product.url))) -->
+<!-- <img src="img/african-women.png" cs-if="product.description.teaser.image(cs.@aspectRatio).m.src" class="img-fluid" alt="" cs-src="product.description.teaser.image('1-1').m.src" cs-attr-title="product.description.teaser.title?string" cs-attr-alt="product.description.teaser.alt"> -->
+<picture>
+<source/>
+<img alt="" class="img-fluid" src="/__image/a/310295/alias/m/v/4/c/30/ar/1-1/fn/azenis-fk520-keyvisual-1820x1820px-en.jpg"/>
+</picture>
+<div class="mask linkbox-content flex-center">
+<div class="linkbox-content-wrapper">
+<h3>Azenis FK520</h3>
+<!-- <button class="fty-btn-teaser btn btn-primary">Test</button> -->
+</div>
+</div>
+</a>
+</div>
+</article>
+</div><div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 csSpacer">
+<article class="">
+<div class="view hm-white-light hm-zoom linkbox hoverable"> <!-- cs-class="custom.template.concatClass('view hm-black-light linkbox hoverable ', cs.@section['image-box'].@style)" -->
+<p class="hidden">/__image/a/58784/alias/m/v/11/c/114/ar/1-1/fn/19164-ziex-ze310-ecorun-reifen-keyvisual-1820x1820px-v21.jpg</p>
+<a href="/en/tyres/car-tyres/product-detail/40535"><!-- (cs.navigation.navigated.url?contains('/truck-tyres'))?then(product.url + '?type=truck', (cs.navigation.navigated.url?contains('/van-tyres'))?then(product.url + '?type=lighttruck', (cs.navigation.navigated.url?contains('/car-tyres'))?then(product.url + '?type=pcr', product.url))) -->
+<!-- <img src="img/african-women.png" cs-if="product.description.teaser.image(cs.@aspectRatio).m.src" class="img-fluid" alt="" cs-src="product.description.teaser.image('1-1').m.src" cs-attr-title="product.description.teaser.title?string" cs-attr-alt="product.description.teaser.alt"> -->
+<picture>
+<source/>
+<img alt="" class="img-fluid" src="/__image/a/58784/alias/m/v/11/c/114/ar/1-1/fn/19164-ziex-ze310-ecorun-reifen-keyvisual-1820x1820px-v21.jpg"/>
+</picture>
+<div class="mask linkbox-content flex-center">
+<div class="linkbox-content-wrapper">
+<h3>ZIEX ZE310</h3>
+<!-- <button class="fty-btn-teaser btn btn-primary">Test</button> -->
+</div>
+</div>
+</a>
+</div>
+</article>
+</div><div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 csSpacer">
+<article class="">
+<div class="view hm-white-light hm-zoom linkbox hoverable"> <!-- cs-class="custom.template.concatClass('view hm-black-light linkbox hoverable ', cs.@section['image-box'].@style)" -->
+<p class="hidden">/__image/a/167887/alias/m/v/5/c/44/ar/1-1/fn/sn110-keyvisual-1820x1820px-en.jpg</p>
+<a href="/en/tyres/car-tyres/product-detail/169291"><!-- (cs.navigation.navigated.url?contains('/truck-tyres'))?then(product.url + '?type=truck', (cs.navigation.navigated.url?contains('/van-tyres'))?then(product.url + '?type=lighttruck', (cs.navigation.navigated.url?contains('/car-tyres'))?then(product.url + '?type=pcr', product.url))) -->
+<!-- <img src="img/african-women.png" cs-if="product.description.teaser.image(cs.@aspectRatio).m.src" class="img-fluid" alt="" cs-src="product.description.teaser.image('1-1').m.src" cs-attr-title="product.description.teaser.title?string" cs-attr-alt="product.description.teaser.alt"> -->
+<picture>
+<source/>
+<img alt="" class="img-fluid" src="/__image/a/167887/alias/m/v/5/c/44/ar/1-1/fn/sn110-keyvisual-1820x1820px-en.jpg"/>
+</picture>
+<div class="mask linkbox-content flex-center">
+<div class="linkbox-content-wrapper">
+<h3>SINCERA SN110</h3>
+<!-- <button class="fty-btn-teaser btn btn-primary">Test</button> -->
+</div>
+</div>
+</a>
+</div>
+</article>
+</div><div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 csSpacer">
+<article class="">
+<div class="view hm-white-light hm-zoom linkbox hoverable"> <!-- cs-class="custom.template.concatClass('view hm-black-light linkbox hoverable ', cs.@section['image-box'].@style)" -->
+<p class="hidden"></p>
+<a href="/en/tyres/car-tyres/product-detail/40756"><!-- (cs.navigation.navigated.url?contains('/truck-tyres'))?then(product.url + '?type=truck', (cs.navigation.navigated.url?contains('/van-tyres'))?then(product.url + '?type=lighttruck', (cs.navigation.navigated.url?contains('/car-tyres'))?then(product.url + '?type=pcr', product.url))) -->
+<!-- <img src="img/african-women.png" cs-if="product.description.teaser.image(cs.@aspectRatio).m.src" class="img-fluid" alt="" cs-src="product.description.teaser.image('1-1').m.src" cs-attr-title="product.description.teaser.title?string" cs-attr-alt="product.description.teaser.alt"> -->
+<div class="mask linkbox-content flex-center">
+<div class="linkbox-content-wrapper">
+<h3></h3>
+<!-- <button class="fty-btn-teaser btn btn-primary">Test</button> -->
+</div>
+</div>
+</a>
+</div>
+</article>
+</div>
+<!-- LIST -->
+<div class="fty-table-view table-responsive">
+<table class="table table-striped table-hover fty-products-list wow fadeIn">
+<thead>
+<tr>
+<th>Image</th>
+<th>Description</th>
+<!-- <th style="width: 15%;" class="fty-hidden-small-table-cell" cs-translate="filter.falken:tyre.properties.all">Properties</th> -->
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="">
+<td>
+<a href="/en/tyres/car-tyres/product-detail/661863">
+<img src="/__image/a/661261/alias/xs/v/4/c/30/ar/1-1/fn/ziex-ze320-keyvisual-1820x1820px-en.jpg"/>
+</a>
+</td>
+<td>
+<p>Ziex ZE320</p>
+<p class="fty-hidden-small">Top standards in comfort and safety</p>
+</td>
+<!--
+                                                                <td class="fty-hidden-small">
+                                                                    <cs-repeat value="product.features['falken:tyre.properties'] as property" cs-if="product.features['falken:tyre.properties']?has_content">
+                                                                        <p class="badge mb-0"><i class="fas fa-check"></i> <cs-replace value="property.value"></cs-replace></p>
+                                                                    </cs-repeat>
+                                                                </td>
+                                                                -->
+<td>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-small" href="/en/tyres/car-tyres/product-detail/661863">Show detail page</a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-small" href="/en/service/dealer-locator">Dealer Locator</a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-large" href="/en/tyres/car-tyres/product-detail/661863"><i class="fas fa-info"></i></a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-large" href="/en/service/dealer-locator"><i class="fas fa-map-pin"></i></a>
+<!-- <button type="submit" class="btn btn-secondary ml-0" cs-bind="submitLabelGenerator" name="label.submitLabelGenerator" cs-translate="fty-label-generator.submit">Label herunterladen</button> -->
+</td>
+</tr>
+<tr class="">
+<td>
+<a href="/en/tyres/car-tyres/product-detail/609267">
+<img src="/__image/a/626467/alias/xs/v/5/c/39/ar/1-1/fn/azenis-rs820-keyvisual-1820x1820px-en.jpg"/>
+</a>
+</td>
+<td>
+<p>Azenis RS820</p>
+<p class="fty-hidden-small">The ultimate high-performance tyres for sporty vehicles, developed to enhance driving pleasure to the max and ...</p>
+</td>
+<!--
+                                                                <td class="fty-hidden-small">
+                                                                    <cs-repeat value="product.features['falken:tyre.properties'] as property" cs-if="product.features['falken:tyre.properties']?has_content">
+                                                                        <p class="badge mb-0"><i class="fas fa-check"></i> <cs-replace value="property.value"></cs-replace></p>
+                                                                    </cs-repeat>
+                                                                </td>
+                                                                -->
+<td>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-small" href="/en/tyres/car-tyres/product-detail/609267">Show detail page</a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-small" href="/en/service/dealer-locator">Dealer Locator</a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-large" href="/en/tyres/car-tyres/product-detail/609267"><i class="fas fa-info"></i></a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-large" href="/en/service/dealer-locator"><i class="fas fa-map-pin"></i></a>
+<!-- <button type="submit" class="btn btn-secondary ml-0" cs-bind="submitLabelGenerator" name="label.submitLabelGenerator" cs-translate="fty-label-generator.submit">Label herunterladen</button> -->
+</td>
+</tr>
+<tr class="">
+<td>
+<a href="/en/tyres/car-tyres/product-detail/439269">
+<img src="/__image/a/439669/alias/xs/v/4/c/31/ar/1-1/fn/eziex-keyvisual-1820x1820px-en.jpg"/>
+</a>
+</td>
+<td>
+<p>e. ZIEX</p>
+<p class="fty-hidden-small">Tailored to the needs of electric vehicles, the e. ZIEX incorporates cutting-edge technologies to minimise rolling ...</p>
+</td>
+<!--
+                                                                <td class="fty-hidden-small">
+                                                                    <cs-repeat value="product.features['falken:tyre.properties'] as property" cs-if="product.features['falken:tyre.properties']?has_content">
+                                                                        <p class="badge mb-0"><i class="fas fa-check"></i> <cs-replace value="property.value"></cs-replace></p>
+                                                                    </cs-repeat>
+                                                                </td>
+                                                                -->
+<td>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-small" href="/en/tyres/car-tyres/product-detail/439269">Show detail page</a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-small" href="/en/service/dealer-locator">Dealer Locator</a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-large" href="/en/tyres/car-tyres/product-detail/439269"><i class="fas fa-info"></i></a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-large" href="/en/service/dealer-locator"><i class="fas fa-map-pin"></i></a>
+<!-- <button type="submit" class="btn btn-secondary ml-0" cs-bind="submitLabelGenerator" name="label.submitLabelGenerator" cs-translate="fty-label-generator.submit">Label herunterladen</button> -->
+</td>
+</tr>
+<tr class="">
+<td>
+<a href="/en/tyres/car-tyres/product-detail/310083">
+<img src="/__image/a/310295/alias/xs/v/4/c/30/ar/1-1/fn/azenis-fk520-keyvisual-1820x1820px-en.jpg"/>
+</a>
+</td>
+<td>
+<p>Azenis FK520</p>
+<p class="fty-hidden-small">Presenting Falken’s AZENIS FK520 Ultra-High-Performance Tyre – next-generation racetrack technology for the road. ...</p>
+</td>
+<!--
+                                                                <td class="fty-hidden-small">
+                                                                    <cs-repeat value="product.features['falken:tyre.properties'] as property" cs-if="product.features['falken:tyre.properties']?has_content">
+                                                                        <p class="badge mb-0"><i class="fas fa-check"></i> <cs-replace value="property.value"></cs-replace></p>
+                                                                    </cs-repeat>
+                                                                </td>
+                                                                -->
+<td>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-small" href="/en/tyres/car-tyres/product-detail/310083">Show detail page</a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-small" href="/en/service/dealer-locator">Dealer Locator</a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-large" href="/en/tyres/car-tyres/product-detail/310083"><i class="fas fa-info"></i></a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-large" href="/en/service/dealer-locator"><i class="fas fa-map-pin"></i></a>
+<!-- <button type="submit" class="btn btn-secondary ml-0" cs-bind="submitLabelGenerator" name="label.submitLabelGenerator" cs-translate="fty-label-generator.submit">Label herunterladen</button> -->
+</td>
+</tr>
+<tr class="">
+<td>
+<a href="/en/tyres/car-tyres/product-detail/40535">
+<img src="/__image/a/58784/alias/xs/v/11/c/114/ar/1-1/fn/19164-ziex-ze310-ecorun-reifen-keyvisual-1820x1820px-v21.jpg"/>
+</a>
+</td>
+<td>
+<p>ZIEX ZE310</p>
+<p class="fty-hidden-small">The latest generation of our summer high-performance model line. Featuring an innovative compound, designed to ...</p>
+</td>
+<!--
+                                                                <td class="fty-hidden-small">
+                                                                    <cs-repeat value="product.features['falken:tyre.properties'] as property" cs-if="product.features['falken:tyre.properties']?has_content">
+                                                                        <p class="badge mb-0"><i class="fas fa-check"></i> <cs-replace value="property.value"></cs-replace></p>
+                                                                    </cs-repeat>
+                                                                </td>
+                                                                -->
+<td>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-small" href="/en/tyres/car-tyres/product-detail/40535">Show detail page</a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-small" href="/en/service/dealer-locator">Dealer Locator</a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-large" href="/en/tyres/car-tyres/product-detail/40535"><i class="fas fa-info"></i></a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-large" href="/en/service/dealer-locator"><i class="fas fa-map-pin"></i></a>
+<!-- <button type="submit" class="btn btn-secondary ml-0" cs-bind="submitLabelGenerator" name="label.submitLabelGenerator" cs-translate="fty-label-generator.submit">Label herunterladen</button> -->
+</td>
+</tr>
+<tr class="">
+<td>
+<a href="/en/tyres/car-tyres/product-detail/169291">
+<img src="/__image/a/167887/alias/xs/v/5/c/44/ar/1-1/fn/sn110-keyvisual-1820x1820px-en.jpg"/>
+</a>
+</td>
+<td>
+<p>SINCERA SN110</p>
+<p class="fty-hidden-small">The ideal choice for cost-conscious compact and midsize car drivers. Equipped with Advanced 4D-Nano Design ...</p>
+</td>
+<!--
+                                                                <td class="fty-hidden-small">
+                                                                    <cs-repeat value="product.features['falken:tyre.properties'] as property" cs-if="product.features['falken:tyre.properties']?has_content">
+                                                                        <p class="badge mb-0"><i class="fas fa-check"></i> <cs-replace value="property.value"></cs-replace></p>
+                                                                    </cs-repeat>
+                                                                </td>
+                                                                -->
+<td>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-small" href="/en/tyres/car-tyres/product-detail/169291">Show detail page</a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-small" href="/en/service/dealer-locator">Dealer Locator</a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-large" href="/en/tyres/car-tyres/product-detail/169291"><i class="fas fa-info"></i></a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-large" href="/en/service/dealer-locator"><i class="fas fa-map-pin"></i></a>
+<!-- <button type="submit" class="btn btn-secondary ml-0" cs-bind="submitLabelGenerator" name="label.submitLabelGenerator" cs-translate="fty-label-generator.submit">Label herunterladen</button> -->
+</td>
+</tr>
+<tr class="">
+<td>
+<a href="/en/tyres/car-tyres/product-detail/40756">
+<img/>
+</a>
+</td>
+<td>
+<p></p>
+</td>
+<!--
+                                                                <td class="fty-hidden-small">
+                                                                    <cs-repeat value="product.features['falken:tyre.properties'] as property" cs-if="product.features['falken:tyre.properties']?has_content">
+                                                                        <p class="badge mb-0"><i class="fas fa-check"></i> <cs-replace value="property.value"></cs-replace></p>
+                                                                    </cs-repeat>
+                                                                </td>
+                                                                -->
+<td>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-small" href="/en/tyres/car-tyres/product-detail/40756">Show detail page</a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-small" href="/en/service/dealer-locator">Dealer Locator</a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-large" href="/en/tyres/car-tyres/product-detail/40756"><i class="fas fa-info"></i></a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-large" href="/en/service/dealer-locator"><i class="fas fa-map-pin"></i></a>
+<!-- <button type="submit" class="btn btn-secondary ml-0" cs-bind="submitLabelGenerator" name="label.submitLabelGenerator" cs-translate="fty-label-generator.submit">Label herunterladen</button> -->
+</td>
+</tr>
+<!--
+                                                            <tr>
+                                                                <th scope="row">2</th>
+                                                                <td>ZIEX ZE914EC</td>
+                                                                <td>255/35R18</td>
+                                                                <td>90W</td>
+                                                                <td>
+                                                                    <button type="button" class="btn btn-secondary ml-0 fty-label-dwl-btn" data-asset-id="75950">EU Label herunterladen</button>
+                                                                </td>
+                                                            </tr>
+                                                            -->
+</tbody>
+</table>
+</div>
+</div>
+<br/>
+</div>
+</div>
+<div class="csSnippet js-filter-snippet">
+<div>
+<!--
+                                            <h3 cs-if="cs.@assetType = 'product.'" class="h3-responsive" cs-translate="product.search.title">Product Portal</h3>
+                                            <h3 cs-if="cs.@assetType = 'article.'" class="h3-responsive" cs-translate="article.search.title">Product Portal</h3>
+                                            <hr>
+                                            -->
+<!-- cs-class="(cs.navigation.navigated.url?contains('/de/reifen/suche-nach-reifengroessen') || cs.navigation.navigated.url?contains('/en/tyres/search-for-tyre-sizes'))?string('search-top card p-3 fty-product-filter','search-top card p-3 fty-product-filter hidden');" -->
+<div class="search-top card p-3 fty-product-filter wow fadeInUp">
+<form class="js-ajax-form"> <div class="form-group">
+<div class="md-form">
+<input class="form-control js-ajax-value js-text-search"/> <label>Search for ...</label>
+</div>
+</div>
+<div class="js-filter-replace">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<p><b>General Features</b></p>
+</div>
+</div>
+<input class="js-filter js-ajax-value js-ajax-trigger-change"/><input class="js-ajax-value js-ajax-trigger-change js-ajax-page"/> <div class="row">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+<select class="mdb-select js-filter-data">
+<option>Width</option>
+<option>145
+</option>
+<option>155
+</option>
+<option>165
+</option>
+<option>175
+</option>
+<option>185
+</option>
+<option>195
+</option>
+<option>205
+</option>
+<option>215
+</option>
+<option>225
+</option>
+<option>235
+</option>
+<option>245
+</option>
+<option>255
+</option>
+<option>265
+</option>
+<option>275
+</option>
+<option>285
+</option>
+<option>295
+</option>
+</select>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+<select class="mdb-select js-filter-data">
+<option>Height</option>
+<option>35
+</option>
+<option>40
+</option>
+<option>45
+</option>
+<option>50
+</option>
+<option>55
+</option>
+<option>60
+</option>
+<option>65
+</option>
+<option>70
+</option>
+</select>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+<select class="mdb-select js-filter-data">
+<option>Rim</option>
+<option>14
+</option>
+<option>15
+</option>
+<option>16
+</option>
+<option>17
+</option>
+<option>18
+</option>
+<option>19
+</option>
+<option>20
+</option>
+<option>21
+</option>
+</select>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+<select class="mdb-select js-filter-data">
+<option>Season</option>
+<option>Winter
+</option>
+</select>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+<select class="mdb-select js-filter-data">
+<option>Properties</option>
+<option>Snowflake
+</option>
+<option>M+S
+</option>
+</select>
+</div>
+</div>
+<div class="row">
+<div class="csCol-one-third">
+<div class="col__inner">
+<input class="btn"/>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3">
+<span class="csFilter__label">Results: 2</span>
+</div>
+<div class="col-lg-9 col-md-9 col-xs-12">
+<div class="btn-toolbar float-xs-right">
+<div class="btn-group">
+<button class="btn btn-secondary btn-sm waves-effect waves-light js-button-up"><i class="fa fa-angle-up"></i></button>
+<button class="btn btn-secondary btn-sm waves-effect waves-light js-button-down"><i class="fa fa-angle-down"></i></button>
+</div>
+<input class="js-ajax-variant js-ajax-trigger-change"/> <div class="btn-group">
+<button class="btn btn-secondary btn-sm waves-effect waves-light js-button-tile active"><i class="fa fa-th"></i></button>
+<button class="btn btn-secondary btn-sm waves-effect waves-light js-button-list"><i class="fa fa-list"></i></button>
+</div>
+</div>
+<div class="csSorting-select float-lg-right float-md-right float-sm-right float-xs-left mr-1">
+<input class="js-sorting js-ajax-value js-ajax-trigger-change"/>
+<select class="mdb-select js-sorting-data">
+<option>Relevance</option>
+<option>Name</option>
+<option>Article Number</option>
+<option>Weight</option>
+</select>
+</div>
+</div>
+</div>
+<hr/>
+<div class="clearfix"></div>
+</div>
+</form> </div>
+</div>
+<div class="csPreloader js-loading-indicator csEle__position-fixed">
+<div class="preloader-wrapper small active">
+<div class="spinner-layer spinner-yellow-only csLoader--them-color">
+<div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div>
+</div>
+</div>
+</div>
+<h2 class="h2-responsive wow fadeInUp">Winter tyres</h2>
+<!-- START Product Result Widget -->
+<div class="js-result-replace">
+<legend class="mt-2 wow fadeInUp">Search results</legend>
+<div class="row csGrid--flex fty-products fty-products-grid wow fadeInUp">
+<!-- GRID -->
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 csSpacer">
+<article class="">
+<div class="view hm-white-light hm-zoom linkbox hoverable"> <!-- cs-class="custom.template.concatClass('view hm-black-light linkbox hoverable ', cs.@section['image-box'].@style)" -->
+<p class="hidden">/__image/a/372065/alias/m/v/4/c/30/ar/1-1/fn/eurowinter-hs02-pro-keyvisual-1820x1820px-en.jpg</p>
+<a href="/en/tyres/car-tyres/product-detail/372187"><!-- (cs.navigation.navigated.url?contains('/truck-tyres'))?then(product.url + '?type=truck', (cs.navigation.navigated.url?contains('/van-tyres'))?then(product.url + '?type=lighttruck', (cs.navigation.navigated.url?contains('/car-tyres'))?then(product.url + '?type=pcr', product.url))) -->
+<!-- <img src="img/african-women.png" cs-if="product.description.teaser.image(cs.@aspectRatio).m.src" class="img-fluid" alt="" cs-src="product.description.teaser.image('1-1').m.src" cs-attr-title="product.description.teaser.title?string" cs-attr-alt="product.description.teaser.alt"> -->
+<picture>
+<source/>
+<img alt="" class="img-fluid" src="/__image/a/372065/alias/m/v/4/c/30/ar/1-1/fn/eurowinter-hs02-pro-keyvisual-1820x1820px-en.jpg"/>
+</picture>
+<div class="mask linkbox-content flex-center">
+<div class="linkbox-content-wrapper">
+<h3>Eurowinter HS02 PRO</h3>
+<!-- <button class="fty-btn-teaser btn btn-primary">Test</button> -->
+</div>
+</div>
+</a>
+</div>
+</article>
+</div><div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 csSpacer">
+<article class="">
+<div class="view hm-white-light hm-zoom linkbox hoverable"> <!-- cs-class="custom.template.concatClass('view hm-black-light linkbox hoverable ', cs.@section['image-box'].@style)" -->
+<p class="hidden">/__image/a/371665/alias/m/v/4/c/30/ar/1-1/fn/eurowinter-hs02-keyvisual-1820x1820px-en.jpg</p>
+<a href="/en/tyres/car-tyres/product-detail/371067"><!-- (cs.navigation.navigated.url?contains('/truck-tyres'))?then(product.url + '?type=truck', (cs.navigation.navigated.url?contains('/van-tyres'))?then(product.url + '?type=lighttruck', (cs.navigation.navigated.url?contains('/car-tyres'))?then(product.url + '?type=pcr', product.url))) -->
+<!-- <img src="img/african-women.png" cs-if="product.description.teaser.image(cs.@aspectRatio).m.src" class="img-fluid" alt="" cs-src="product.description.teaser.image('1-1').m.src" cs-attr-title="product.description.teaser.title?string" cs-attr-alt="product.description.teaser.alt"> -->
+<picture>
+<source/>
+<img alt="" class="img-fluid" src="/__image/a/371665/alias/m/v/4/c/30/ar/1-1/fn/eurowinter-hs02-keyvisual-1820x1820px-en.jpg"/>
+</picture>
+<div class="mask linkbox-content flex-center">
+<div class="linkbox-content-wrapper">
+<h3>Eurowinter HS02</h3>
+<!-- <button class="fty-btn-teaser btn btn-primary">Test</button> -->
+</div>
+</div>
+</a>
+</div>
+</article>
+</div>
+<!-- LIST -->
+<div class="fty-table-view table-responsive">
+<table class="table table-striped table-hover fty-products-list wow fadeIn">
+<thead>
+<tr>
+<th>Image</th>
+<th>Description</th>
+<!-- <th style="width: 15%;" class="fty-hidden-small-table-cell" cs-translate="filter.falken:tyre.properties.all">Properties</th> -->
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="">
+<td>
+<a href="/en/tyres/car-tyres/product-detail/372187">
+<img src="/__image/a/372065/alias/xs/v/4/c/30/ar/1-1/fn/eurowinter-hs02-pro-keyvisual-1820x1820px-en.jpg"/>
+</a>
+</td>
+<td>
+<p>Eurowinter HS02 PRO</p>
+<p class="fty-hidden-small">The advanced compound of the EUROWINTER HS02 PRO achieves the perfect balance between snow and wet grip and can ...</p>
+</td>
+<!--
+                                                                <td class="fty-hidden-small">
+                                                                    <cs-repeat value="product.features['falken:tyre.properties'] as property" cs-if="product.features['falken:tyre.properties']?has_content">
+                                                                        <p class="badge mb-0"><i class="fas fa-check"></i> <cs-replace value="property.value"></cs-replace></p>
+                                                                    </cs-repeat>
+                                                                </td>
+                                                                -->
+<td>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-small" href="/en/tyres/car-tyres/product-detail/372187">Show detail page</a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-small" href="/en/service/dealer-locator">Dealer Locator</a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-large" href="/en/tyres/car-tyres/product-detail/372187"><i class="fas fa-info"></i></a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-large" href="/en/service/dealer-locator"><i class="fas fa-map-pin"></i></a>
+<!-- <button type="submit" class="btn btn-secondary ml-0" cs-bind="submitLabelGenerator" name="label.submitLabelGenerator" cs-translate="fty-label-generator.submit">Label herunterladen</button> -->
+</td>
+</tr>
+<tr class="">
+<td>
+<a href="/en/tyres/car-tyres/product-detail/371067">
+<img src="/__image/a/371665/alias/xs/v/4/c/30/ar/1-1/fn/eurowinter-hs02-keyvisual-1820x1820px-en.jpg"/>
+</a>
+</td>
+<td>
+<p>Eurowinter HS02</p>
+<p class="fty-hidden-small">European winters differ (enormously) in their climatic conditions; northern regions and mountains with snow or other ...</p>
+</td>
+<!--
+                                                                <td class="fty-hidden-small">
+                                                                    <cs-repeat value="product.features['falken:tyre.properties'] as property" cs-if="product.features['falken:tyre.properties']?has_content">
+                                                                        <p class="badge mb-0"><i class="fas fa-check"></i> <cs-replace value="property.value"></cs-replace></p>
+                                                                    </cs-repeat>
+                                                                </td>
+                                                                -->
+<td>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-small" href="/en/tyres/car-tyres/product-detail/371067">Show detail page</a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-small" href="/en/service/dealer-locator">Dealer Locator</a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-large" href="/en/tyres/car-tyres/product-detail/371067"><i class="fas fa-info"></i></a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-large" href="/en/service/dealer-locator"><i class="fas fa-map-pin"></i></a>
+<!-- <button type="submit" class="btn btn-secondary ml-0" cs-bind="submitLabelGenerator" name="label.submitLabelGenerator" cs-translate="fty-label-generator.submit">Label herunterladen</button> -->
+</td>
+</tr>
+<!--
+                                                            <tr>
+                                                                <th scope="row">2</th>
+                                                                <td>ZIEX ZE914EC</td>
+                                                                <td>255/35R18</td>
+                                                                <td>90W</td>
+                                                                <td>
+                                                                    <button type="button" class="btn btn-secondary ml-0 fty-label-dwl-btn" data-asset-id="75950">EU Label herunterladen</button>
+                                                                </td>
+                                                            </tr>
+                                                            -->
+</tbody>
+</table>
+</div>
+</div>
+<br/>
+</div>
+</div>
+<div class="csSnippet js-filter-snippet">
+<div>
+<!--
+                                            <h3 cs-if="cs.@assetType = 'product.'" class="h3-responsive" cs-translate="product.search.title">Product Portal</h3>
+                                            <h3 cs-if="cs.@assetType = 'article.'" class="h3-responsive" cs-translate="article.search.title">Product Portal</h3>
+                                            <hr>
+                                            -->
+<!-- cs-class="(cs.navigation.navigated.url?contains('/de/reifen/suche-nach-reifengroessen') || cs.navigation.navigated.url?contains('/en/tyres/search-for-tyre-sizes'))?string('search-top card p-3 fty-product-filter','search-top card p-3 fty-product-filter hidden');" -->
+<div class="search-top card p-3 fty-product-filter wow fadeInUp">
+<form class="js-ajax-form"> <div class="form-group">
+<div class="md-form">
+<input class="form-control js-ajax-value js-text-search"/> <label>Search for ...</label>
+</div>
+</div>
+<div class="js-filter-replace">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<p><b>General Features</b></p>
+</div>
+</div>
+<input class="js-filter js-ajax-value js-ajax-trigger-change"/><input class="js-ajax-value js-ajax-trigger-change js-ajax-page"/> <div class="row">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+<select class="mdb-select js-filter-data">
+<option>Width</option>
+<option>165
+</option>
+<option>175
+</option>
+<option>185
+</option>
+<option>195
+</option>
+<option>205
+</option>
+<option>215
+</option>
+<option>225
+</option>
+<option>235
+</option>
+<option>245
+</option>
+<option>255
+</option>
+<option>265
+</option>
+<option>275
+</option>
+<option>285
+</option>
+<option>295
+</option>
+<option>305
+</option>
+</select>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+<select class="mdb-select js-filter-data">
+<option>Height</option>
+<option>35
+</option>
+<option>40
+</option>
+<option>45
+</option>
+<option>50
+</option>
+<option>55
+</option>
+<option>60
+</option>
+<option>65
+</option>
+<option>70
+</option>
+</select>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+<select class="mdb-select js-filter-data">
+<option>Rim</option>
+<option>15
+</option>
+<option>16
+</option>
+<option>17
+</option>
+<option>18
+</option>
+<option>19
+</option>
+<option>20
+</option>
+<option>21
+</option>
+</select>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+<select class="mdb-select js-filter-data">
+<option>Season</option>
+<option>All Season
+</option>
+</select>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+<select class="mdb-select js-filter-data">
+<option>Properties</option>
+<option>Snowflake
+</option>
+<option>M+S
+</option>
+</select>
+</div>
+</div>
+<div class="row">
+<div class="csCol-one-third">
+<div class="col__inner">
+<input class="btn"/>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3">
+<span class="csFilter__label">Results: 2</span>
+</div>
+<div class="col-lg-9 col-md-9 col-xs-12">
+<div class="btn-toolbar float-xs-right">
+<div class="btn-group">
+<button class="btn btn-secondary btn-sm waves-effect waves-light js-button-up"><i class="fa fa-angle-up"></i></button>
+<button class="btn btn-secondary btn-sm waves-effect waves-light js-button-down"><i class="fa fa-angle-down"></i></button>
+</div>
+<input class="js-ajax-variant js-ajax-trigger-change"/> <div class="btn-group">
+<button class="btn btn-secondary btn-sm waves-effect waves-light js-button-tile active"><i class="fa fa-th"></i></button>
+<button class="btn btn-secondary btn-sm waves-effect waves-light js-button-list"><i class="fa fa-list"></i></button>
+</div>
+</div>
+<div class="csSorting-select float-lg-right float-md-right float-sm-right float-xs-left mr-1">
+<input class="js-sorting js-ajax-value js-ajax-trigger-change"/>
+<select class="mdb-select js-sorting-data">
+<option>Relevance</option>
+<option>Name</option>
+<option>Article Number</option>
+<option>Weight</option>
+</select>
+</div>
+</div>
+</div>
+<hr/>
+<div class="clearfix"></div>
+</div>
+</form> </div>
+</div>
+<div class="csPreloader js-loading-indicator csEle__position-fixed">
+<div class="preloader-wrapper small active">
+<div class="spinner-layer spinner-yellow-only csLoader--them-color">
+<div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div>
+</div>
+</div>
+</div>
+<h2 class="h2-responsive wow fadeInUp">All-season tyres</h2>
+<!-- START Product Result Widget -->
+<div class="js-result-replace">
+<legend class="mt-2 wow fadeInUp">Search results</legend>
+<div class="row csGrid--flex fty-products fty-products-grid wow fadeInUp">
+<!-- GRID -->
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 csSpacer">
+<article class="">
+<div class="view hm-white-light hm-zoom linkbox hoverable"> <!-- cs-class="custom.template.concatClass('view hm-black-light linkbox hoverable ', cs.@section['image-box'].@style)" -->
+<p class="hidden">/__image/a/550266/alias/m/v/4/c/33/ar/1-1/fn/Euroall-season-as220-pro-keyvisual-1820x1820px-en.jpg</p>
+<a href="/en/tyres/car-tyres/product-detail/550491"><!-- (cs.navigation.navigated.url?contains('/truck-tyres'))?then(product.url + '?type=truck', (cs.navigation.navigated.url?contains('/van-tyres'))?then(product.url + '?type=lighttruck', (cs.navigation.navigated.url?contains('/car-tyres'))?then(product.url + '?type=pcr', product.url))) -->
+<!-- <img src="img/african-women.png" cs-if="product.description.teaser.image(cs.@aspectRatio).m.src" class="img-fluid" alt="" cs-src="product.description.teaser.image('1-1').m.src" cs-attr-title="product.description.teaser.title?string" cs-attr-alt="product.description.teaser.alt"> -->
+<picture>
+<source/>
+<img alt="" class="img-fluid" src="/__image/a/550266/alias/m/v/4/c/33/ar/1-1/fn/Euroall-season-as220-pro-keyvisual-1820x1820px-en.jpg"/>
+</picture>
+<div class="mask linkbox-content flex-center">
+<div class="linkbox-content-wrapper">
+<h3>EUROALL SEASON AS220 PRO</h3>
+<!-- <button class="fty-btn-teaser btn btn-primary">Test</button> -->
+</div>
+</div>
+</a>
+</div>
+</article>
+</div><div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 csSpacer">
+<article class="">
+<div class="view hm-white-light hm-zoom linkbox hoverable"> <!-- cs-class="custom.template.concatClass('view hm-black-light linkbox hoverable ', cs.@section['image-box'].@style)" -->
+<p class="hidden">/__image/a/735864/alias/m/v/4/c/30/ar/1-1/fn/as220-keyvisual-1820x1820px-en.jpg</p>
+<a href="/en/tyres/car-tyres/product-detail/735508"><!-- (cs.navigation.navigated.url?contains('/truck-tyres'))?then(product.url + '?type=truck', (cs.navigation.navigated.url?contains('/van-tyres'))?then(product.url + '?type=lighttruck', (cs.navigation.navigated.url?contains('/car-tyres'))?then(product.url + '?type=pcr', product.url))) -->
+<!-- <img src="img/african-women.png" cs-if="product.description.teaser.image(cs.@aspectRatio).m.src" class="img-fluid" alt="" cs-src="product.description.teaser.image('1-1').m.src" cs-attr-title="product.description.teaser.title?string" cs-attr-alt="product.description.teaser.alt"> -->
+<picture>
+<source/>
+<img alt="" class="img-fluid" src="/__image/a/735864/alias/m/v/4/c/30/ar/1-1/fn/as220-keyvisual-1820x1820px-en.jpg"/>
+</picture>
+<div class="mask linkbox-content flex-center">
+<div class="linkbox-content-wrapper">
+<h3>EUROALL SEASON AS220</h3>
+<!-- <button class="fty-btn-teaser btn btn-primary">Test</button> -->
+</div>
+</div>
+</a>
+</div>
+</article>
+</div>
+<!-- LIST -->
+<div class="fty-table-view table-responsive">
+<table class="table table-striped table-hover fty-products-list wow fadeIn">
+<thead>
+<tr>
+<th>Image</th>
+<th>Description</th>
+<!-- <th style="width: 15%;" class="fty-hidden-small-table-cell" cs-translate="filter.falken:tyre.properties.all">Properties</th> -->
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="">
+<td>
+<a href="/en/tyres/car-tyres/product-detail/550491">
+<img src="/__image/a/550266/alias/xs/v/4/c/33/ar/1-1/fn/Euroall-season-as220-pro-keyvisual-1820x1820px-en.jpg"/>
+</a>
+</td>
+<td>
+<p>EUROALL SEASON AS220 PRO</p>
+<p class="fty-hidden-small">Our response to the new requirements: the first all-season tyre for performance-focused drivers, with an extra ...</p>
+</td>
+<!--
+                                                                <td class="fty-hidden-small">
+                                                                    <cs-repeat value="product.features['falken:tyre.properties'] as property" cs-if="product.features['falken:tyre.properties']?has_content">
+                                                                        <p class="badge mb-0"><i class="fas fa-check"></i> <cs-replace value="property.value"></cs-replace></p>
+                                                                    </cs-repeat>
+                                                                </td>
+                                                                -->
+<td>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-small" href="/en/tyres/car-tyres/product-detail/550491">Show detail page</a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-small" href="/en/service/dealer-locator">Dealer Locator</a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-large" href="/en/tyres/car-tyres/product-detail/550491"><i class="fas fa-info"></i></a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-large" href="/en/service/dealer-locator"><i class="fas fa-map-pin"></i></a>
+<!-- <button type="submit" class="btn btn-secondary ml-0" cs-bind="submitLabelGenerator" name="label.submitLabelGenerator" cs-translate="fty-label-generator.submit">Label herunterladen</button> -->
+</td>
+</tr>
+<tr class="">
+<td>
+<a href="/en/tyres/car-tyres/product-detail/735508">
+<img src="/__image/a/735864/alias/xs/v/4/c/30/ar/1-1/fn/as220-keyvisual-1820x1820px-en.jpg"/>
+</a>
+</td>
+<td>
+<p>EUROALL SEASON AS220</p>
+<p class="fty-hidden-small">Our modern solution for today’s exacting demands: The Falken EUROALL SEASON AS220, for comfort, safety and ...</p>
+</td>
+<!--
+                                                                <td class="fty-hidden-small">
+                                                                    <cs-repeat value="product.features['falken:tyre.properties'] as property" cs-if="product.features['falken:tyre.properties']?has_content">
+                                                                        <p class="badge mb-0"><i class="fas fa-check"></i> <cs-replace value="property.value"></cs-replace></p>
+                                                                    </cs-repeat>
+                                                                </td>
+                                                                -->
+<td>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-small" href="/en/tyres/car-tyres/product-detail/735508">Show detail page</a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-small" href="/en/service/dealer-locator">Dealer Locator</a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-large" href="/en/tyres/car-tyres/product-detail/735508"><i class="fas fa-info"></i></a>
+<a class="btn btn-secondary btn-block ml-0 fty-label-dwl-btn fty-hidden-large" href="/en/service/dealer-locator"><i class="fas fa-map-pin"></i></a>
+<!-- <button type="submit" class="btn btn-secondary ml-0" cs-bind="submitLabelGenerator" name="label.submitLabelGenerator" cs-translate="fty-label-generator.submit">Label herunterladen</button> -->
+</td>
+</tr>
+<!--
+                                                            <tr>
+                                                                <th scope="row">2</th>
+                                                                <td>ZIEX ZE914EC</td>
+                                                                <td>255/35R18</td>
+                                                                <td>90W</td>
+                                                                <td>
+                                                                    <button type="button" class="btn btn-secondary ml-0 fty-label-dwl-btn" data-asset-id="75950">EU Label herunterladen</button>
+                                                                </td>
+                                                            </tr>
+                                                            -->
+</tbody>
+</table>
+</div>
+</div>
+<br/>
+</div>
+</div>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">tirelog</string>
+    <string name="channel_alerts">정차 알림</string>
+    <string name="channel_collector">주행 기록</string>
+    <string name="collector_running">주행 중 공기압·기온·주행거리를 기록합니다</string>
+</resources>
